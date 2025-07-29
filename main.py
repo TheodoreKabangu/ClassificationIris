@@ -1,7 +1,7 @@
 #Imports
 import pandas as pd
 import numpy as np
-from sklearn.datasets import load_iris
+#from sklearn.datasets import load_iris
 import streamlit as st
 import pickle
 
@@ -52,15 +52,15 @@ def predict():
     st.write(f"La fleur Iris est classée comme : {classe}")
 
 
-def visualiser():
-    st.title("Visualisation des données Iris")
-    st.write("Cette section permet de visualiser les données du jeu de données Iris.")
-    # Load the dataset
-    X = load_iris().data
-    y = load_iris().target
-    iris_data = pd.DataFrame(X, columns=load_iris().feature_names)
-    iris_data['species'] = pd.Categorical.from_codes(y, load_iris().target_names)
-    #st.write(iris_data.head())
-    st.bar_chart(iris_data['species'].value_counts(ascending=False))
+#def visualiser():
+#    st.title("Visualisation des données Iris")
+#    st.write("Cette section permet de visualiser les données du jeu de données Iris.")
+#    # Load the dataset
+#    X = load_iris().data
+#    y = load_iris().target
+#    iris_data = pd.DataFrame(X, columns=load_iris().feature_names)
+#    iris_data['species'] = pd.Categorical.from_codes(y, load_iris().target_names)
+#    #st.write(iris_data.head())
+#    st.bar_chart(iris_data['species'].value_counts(ascending=False))
 
-viz= visualiser()
+#viz= visualiser()
